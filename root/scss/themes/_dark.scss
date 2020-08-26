@@ -40,9 +40,9 @@ body {
         background-color: $color-background-dark-3;
 
         & .social-media {
-
+            
             &__username {
-
+                color: $color-text-dark-1;
             }
         }
 
@@ -58,7 +58,13 @@ body {
         }
 
         & .followers-indicator {
+
             &__counter {
+                
+                &--normal {
+                    @extend .followers-indicator__counter;
+                    color: $color-text-dark-2;
+                }
             }
         }
     }

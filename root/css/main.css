@@ -35,6 +35,10 @@ body {
   font-size: 1.4rem;
 }
 
+.followers-card .social-media__username {
+  font-size: 1.2rem;
+}
+
 .followers-card .followers-count__counter {
   font-weight: 400;
   letter-spacing: .5rem;
@@ -46,7 +50,13 @@ body {
   font-size: 5.6rem;
   font-weight: 700;
   letter-spacing: normal;
-  line-height: 1;
+  line-height: 1.2;
+}
+
+.followers-card .followers-indicator__counter, .followers-card .followers-indicator__counter--good, .followers-card .followers-indicator__counter--bad, .followers-card .followers-indicator__counter--normal {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 .button {
@@ -91,8 +101,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 21.6rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   max-width: 33rem;
   min-width: 16rem;
   width: 100%;
@@ -137,10 +148,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 8rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 9rem;
 }
 
 .followers-card .followers-count__counter span {
@@ -154,6 +164,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.followers-card .followers-indicator__counter, .followers-card .followers-indicator__counter--good, .followers-card .followers-indicator__counter--bad, .followers-card .followers-indicator__counter--normal {
+  margin-left: .5rem;
+}
+
+.followers-card .followers-indicator__counter--good {
+  color: #1db489;
+}
+
+.followers-card .followers-indicator__counter--bad {
+  color: #dc414c;
 }
 
 .header {
@@ -253,11 +275,19 @@ body {
   background-color: #252a41;
 }
 
+.followers-card .social-media__username {
+  color: #8b97c6;
+}
+
 .followers-card .followers-count__counter {
   color: #8b97c6;
 }
 
 .followers-card .followers-count__counter span {
+  color: white;
+}
+
+.followers-card .followers-indicator__counter--normal {
   color: white;
 }
 

@@ -28,7 +28,7 @@ body {
         & .social-media {
 
             &__username {
-
+                font-size: 1.2rem;
             }
         }
 
@@ -44,7 +44,7 @@ body {
                     font-size: 5.6rem;
                     font-weight: 700;
                     letter-spacing: normal;
-                    line-height: 1;
+                    line-height: 1.2;
                 }
             }
         }
@@ -52,7 +52,9 @@ body {
         & .followers-indicator {
             
             &__counter {
-
+                font-size: 1.2rem;
+                font-weight: 400;
+                text-transform: capitalize;
             }
         }
     }
