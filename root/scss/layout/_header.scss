@@ -1,0 +1,36 @@
+.header {
+    &-heading {
+        padding-bottom: 2.2rem;
+        padding-top: 3.6rem;
+        position: relative;
+
+        &__title {
+            
+        }
+
+        &__followers-number {
+            
+        }
+
+        &::after {
+            bottom: 0;
+            content: "";
+            left: 0;
+            opacity: .1;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    & .mode {
+        padding-top: 1.6rem;
+        
+        &__title {
+            
+        }
+
+        &__button {
+
+        }
+    }
+}

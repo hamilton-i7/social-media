@@ -1,0 +1,65 @@
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 6.7%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.heading, .heading-primary, .heading-tertiary {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.header-heading {
+  padding-bottom: 2.2rem;
+  padding-top: 3.6rem;
+  position: relative;
+}
+
+.header-heading::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: .1;
+  position: absolute;
+  width: 100%;
+}
+
+.header .mode {
+  padding-top: 1.6rem;
+}
+
+body {
+  background-color: #1e202a;
+}
+
+.header-heading__title {
+  color: white;
+}
+
+.header-heading__followers-number {
+  color: #8b97c6;
+}
+
+.header-heading::after {
+  background-color: #8b97c6;
+  border-bottom: 0.1rem solid #8b97c6;
+}
+
+.header .mode__title {
+  color: #8b97c6;
+}

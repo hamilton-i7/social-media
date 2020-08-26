@@ -1,0 +1,30 @@
+body {
+    background-color: $color-background-dark-1;
+}
+
+.header {
+    &-heading {
+        &__title {
+            color: $color-text-dark-2;
+        }
+
+        &__followers-number {
+            color: $color-text-dark-1;
+        }
+
+        &::after {
+            background-color: $color-text-dark-1;
+            border-bottom: .1rem solid $color-text-dark-1;
+        }
+    }
+
+    & .mode {
+        &__title {
+            color: $color-text-dark-1;
+        }
+
+        &__button {
+
+        }
+    }
+}
