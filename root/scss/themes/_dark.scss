@@ -34,19 +34,6 @@ body {
     &-card {
         background-color: $color-background-dark-3;
 
-        &:first-child {
-            border-top: .5rem solid $color-facebook;
-        }
-        &:nth-child(2) {
-            border-top: .5rem solid $color-twitter;
-        }
-        &:nth-child(3) {
-            border-top: .5rem solid $color-instagram;
-        }
-        &:nth-child(4) {
-            border-top: .5rem solid $color-youtube;
-        }
-
         & .social-media {
 
             &__username {
@@ -57,7 +44,10 @@ body {
         & .followers-count {
 
             &__counter {
+                color: $color-text-dark-1;
+
                 & span {
+                    color: $color-text-dark-2;
                 }
             }
         }
