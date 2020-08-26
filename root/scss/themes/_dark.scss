@@ -4,6 +4,11 @@ body {
 
 .header {
     background-color: $color-background-dark-2;
+
+    &::after {
+        background-color: inherit;
+    }
+
     &-heading {
         &__title {
             color: $color-text-dark-2;

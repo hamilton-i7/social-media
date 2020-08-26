@@ -1,4 +1,26 @@
 .header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &::after {
+        border-radius: 2.5rem;
+        bottom: -25%;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &-heading, & .mode {
+        max-width: 33rem;
+        min-width: 16rem;
+        width: 100%;
+    }
+
     &-heading {
         padding-bottom: 2.2rem;
         padding-top: 3.6rem;

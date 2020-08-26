@@ -12,6 +12,9 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.container {
   padding: 0 6.7%;
 }
 
@@ -71,6 +74,7 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  justify-items: center;
   row-gap: 2.4rem;
 }
 
@@ -89,7 +93,9 @@ body {
   height: 21.6rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 32.6rem;
+  max-width: 33rem;
+  min-width: 16rem;
+  width: 100%;
 }
 
 .followers-card:first-child {
@@ -150,6 +156,37 @@ body {
   display: flex;
 }
 
+.header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.header::after {
+  border-radius: 2.5rem;
+  bottom: -25%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.header-heading, .header .mode {
+  max-width: 33rem;
+  min-width: 16rem;
+  width: 100%;
+}
+
 .header-heading {
   padding-bottom: 2.2rem;
   padding-top: 3.6rem;
@@ -189,6 +226,10 @@ body {
 
 .header {
   background-color: #1f212e;
+}
+
+.header::after {
+  background-color: inherit;
 }
 
 .header-heading__title {
