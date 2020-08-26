@@ -24,10 +24,103 @@ body {
   text-transform: capitalize;
 }
 
+.heading-primary {
+  font-size: 2.4rem;
+}
+
+.heading-tertiary {
+  font-size: 1.4rem;
+}
+
+.button {
+  border: none;
+  border-radius: 5rem;
+  height: 2.4rem;
+  outline: none;
+  position: relative;
+  width: 4.8rem;
+}
+
+.button-indicator {
+  border-radius: 50%;
+  height: 1.8rem;
+  left: 8%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1.8rem;
+}
+
+.followers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 2.4rem;
+}
+
+.followers-card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 21.6rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 32.6rem;
+}
+
+.followers-card .social-media {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8rem;
+}
+
+.followers-card .followers-count__counter {
+  letter-spacing: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.followers-card .followers-count__counter span {
+  display: block;
+  font-size: 5.6rem;
+  letter-spacing: normal;
+  line-height: 1;
+}
+
+.followers-card .followers-indicator {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header-heading {
   padding-bottom: 2.2rem;
   padding-top: 3.6rem;
   position: relative;
+}
+
+.header-heading__title {
+  margin-bottom: .1rem;
 }
 
 .header-heading::after {
@@ -40,11 +133,25 @@ body {
 }
 
 .header .mode {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2rem;
   padding-top: 1.6rem;
 }
 
 body {
   background-color: #1e202a;
+}
+
+.header {
+  background-color: #1f212e;
 }
 
 .header-heading__title {
@@ -62,4 +169,32 @@ body {
 
 .header .mode__title {
   color: #8b97c6;
+}
+
+.followers-card {
+  background-color: #252a41;
+}
+
+.followers-card:first-child {
+  border-top: 0.5rem solid #198ff5;
+}
+
+.followers-card:nth-child(2) {
+  border-top: 0.5rem solid #1ca0f2;
+}
+
+.followers-card:nth-child(3) {
+  border-top: 0.5rem solid #fdc468, #df4996;
+}
+
+.followers-card:nth-child(4) {
+  border-top: 0.5rem solid #c4032a;
+}
+
+.button {
+  background: linear-gradient(60deg, #378fe6, #3eda82);
+}
+
+.button-indicator {
+  background-color: #1f212e;
 }

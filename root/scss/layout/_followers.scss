@@ -1,0 +1,51 @@
+.followers {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+
+    &-card {
+        align-items: center;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        height: 21.6rem;
+        justify-content: space-around;
+        width: 32.6rem;
+
+        & .social-media {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 8rem;
+
+            &__username {
+
+            }
+        }
+
+        & .followers-count {
+
+            &__counter {
+                letter-spacing: .5rem;
+                text-align: center;
+                text-transform: uppercase;
+
+                & span {
+                    display: block;
+                    font-size: 5.6rem;
+                    letter-spacing: normal;
+                    line-height: 1;
+                }
+            }
+        }
+
+        & .followers-indicator {
+            align-items: center;
+            display: flex;
+            
+            &__counter {
+
+            }
+        }
+    }
+}

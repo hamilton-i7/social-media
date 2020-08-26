@@ -3,6 +3,7 @@ body {
 }
 
 .header {
+    background-color: $color-background-dark-2;
     &-heading {
         &__title {
             color: $color-text-dark-2;
@@ -26,5 +27,52 @@ body {
         &__button {
 
         }
+    }
+}
+
+.followers {
+    &-card {
+        background-color: $color-background-dark-3;
+
+        &:first-child {
+            border-top: .5rem solid $color-facebook;
+        }
+        &:nth-child(2) {
+            border-top: .5rem solid $color-twitter;
+        }
+        &:nth-child(3) {
+            border-top: .5rem solid $color-instagram;
+        }
+        &:nth-child(4) {
+            border-top: .5rem solid $color-youtube;
+        }
+
+        & .social-media {
+
+            &__username {
+
+            }
+        }
+
+        & .followers-count {
+
+            &__counter {
+                & span {
+                }
+            }
+        }
+
+        & .followers-indicator {
+            &__counter {
+            }
+        }
+    }
+}
+
+.button {
+    background: linear-gradient(60deg, $color-toggle-dark);
+
+    &-indicator {
+        background-color: $color-background-dark-2;
     }
 }

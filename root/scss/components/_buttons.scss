@@ -1,0 +1,18 @@
+.button {
+    border: none;
+    border-radius: 5rem;
+    height: 2.4rem;
+    outline: none;
+    position: relative;
+    width: 4.8rem;
+
+    &-indicator {
+        border-radius: 50%;
+        height: 1.8rem;
+        left: 8%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.8rem;
+    }
+}
