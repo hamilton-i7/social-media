@@ -67,19 +67,6 @@
         & .followers-indicator {
             align-items: center;
             display: flex;
-            
-            &__counter {
-                margin-left: .5rem;
-
-                &--good {
-                    @extend .followers-indicator__counter;
-                    color: $color-primary-1;
-                }
-                &--bad {
-                    @extend .followers-indicator__counter;
-                    color: $color-primary-2;
-                }
-            }
         }
     }
 }

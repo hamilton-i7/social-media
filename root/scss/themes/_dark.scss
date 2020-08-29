@@ -61,10 +61,6 @@ body {
 
             &__counter {
                 
-                &--normal {
-                    @extend .followers-indicator__counter;
-                    color: $color-text-dark-2;
-                }
             }
         }
     }
@@ -75,5 +71,39 @@ body {
 
     &-indicator {
         background-color: $color-background-dark-2;
+    }
+}
+
+.rate {
+    &--normal {
+        @extend .rate;
+        @extend .followers-indicator__counter;
+        color: $color-text-dark-2;
+    }
+}
+
+.overview {
+
+    &-heading {
+        color: $color-text-dark-2;
+    }
+
+    &-card {
+        background-color: $color-background-dark-3;
+
+        &__element {
+
+            & .title {
+                color: $color-text-dark-1;
+            }
+
+            & .icon {
+
+            }
+
+            & .amount {
+                color: $color-text-dark-2;
+            }
+        }
     }
 }

@@ -15,3 +15,18 @@ body {
 .container {
     padding: 0 6.7%;
 }
+
+.rate {
+    margin-left: .5rem;
+
+    &--good {
+        @extend .rate;
+        @extend .followers-indicator__counter;
+        color: $color-primary-1;
+    }
+    &--bad {
+        @extend .rate;
+        @extend .followers-indicator__counter;
+        color: $color-primary-2;
+    }
+}

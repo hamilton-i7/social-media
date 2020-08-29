@@ -1,0 +1,55 @@
+.overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-bottom: 4.5rem;
+    padding-top: 5rem;
+    row-gap: 1.6rem;
+
+    &-heading {
+        min-width: 18.3rem;
+    }
+
+    &-card {
+        border-radius: .5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 12.5rem;
+        max-width: 33rem;
+        min-width: 17.5rem;
+        padding: 6% 8%;
+        width: 100%;
+
+        &__element {
+
+            &:nth-child(even) {
+                justify-self: self-end;
+            }
+
+            &:nth-child(1), &:nth-child(2) {
+                align-self: flex-start;
+            }
+
+            &:nth-child(3), &:nth-child(4) {
+                align-self: flex-end;
+            }
+
+            &:nth-child(4) {
+                display: flex;
+                align-items: center;
+            }
+
+            & .title {
+
+            }
+
+            & .icon {
+
+            }
+
+            & .amount {
+
+            }
+        }
+    }
+}
