@@ -1,0 +1,104 @@
+// .body--light {
+//     background-color: $color-background-light-1;
+// }
+
+// .header--light {
+//     background-color: $color-background-light-2;
+
+//     & .header-heading {
+//         &__title--light {
+//             color: $color-black;
+//         }
+
+//         &__followers-number--light {
+//             color: $color-text-light-1;
+//         }
+
+//         &::after {
+//             border-bottom: .1rem solid inherit;
+//         }
+//     }
+
+//     & .mode {
+//         &__title--light {
+//             color: $color-text-dark-1;
+//         }
+
+//         &__button--light {
+//             background: linear-gradient(60deg, $color-toggle-dark);
+
+//             &-indicator--light {
+//                 background-color: $color-background-dark-2;
+//             }
+//         }
+//     }
+
+//     &::after {
+//         background-color: inherit;
+//     }
+// }
+
+// .followers {
+//     &-card--light {
+//         background-color: $color-background-light-3;
+
+//         & .social-media {
+            
+//             &__username--light {
+//                 color: $color-text-dark-1;
+//             }
+//         }
+
+//         & .followers-count {
+
+//             &__counter--light {
+//                 color: $color-text-dark-1;
+
+//                 & .span--light {
+//                     color: $color-text-dark-2;
+//                 }
+//             }
+//         }
+
+//         & .followers-indicator {
+
+//             &__counter {
+                
+//             }
+//         }
+//     }
+// }
+
+// .rate {
+//     &--normal--light {
+//         @extend .rate;
+//         @extend .followers-indicator__counter;
+//         color: $color-text-dark-2;
+//     }
+// }
+
+// .overview {
+
+//     &-heading--light {
+//         color: $color-text-dark-2;
+//     }
+
+//     &-card--light {
+//         background-color: $color-background-light-3;
+
+//         &__element {
+
+//             & .title--light {
+//                 color: $color-text-dark-1;
+//             }
+
+//             & .icon {
+
+//             }
+
+//             & .amount--light {
+//                 color: $color-text-dark-2;
+//             }
+//         }
+//     }
+// }

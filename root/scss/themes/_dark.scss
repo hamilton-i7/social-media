@@ -1,57 +1,60 @@
-body {
+.body--dark {
     background-color: $color-background-dark-1;
 }
 
-.header {
+.header--dark {
     background-color: $color-background-dark-2;
 
-    &::after {
-        background-color: inherit;
-    }
-
-    &-heading {
-        &__title {
+    & .header-heading {
+        &__title--dark {
             color: $color-text-dark-2;
         }
 
-        &__followers-number {
+        &__followers-number--dark {
             color: $color-text-dark-1;
         }
 
         &::after {
-            background-color: $color-text-dark-1;
             border-bottom: .1rem solid $color-text-dark-1;
         }
     }
 
     & .mode {
-        &__title {
+        &__title--dark {
             color: $color-text-dark-1;
         }
 
-        &__button {
+        &__button--dark {
+            background: linear-gradient(60deg, $color-toggle-dark);
 
+            .mode__button-indicator--dark {
+                background-color: $color-background-dark-2;
+            }
         }
+    }
+
+    &::after {
+        background-color: inherit;
     }
 }
 
 .followers {
-    &-card {
+    &-card--dark {
         background-color: $color-background-dark-3;
 
         & .social-media {
             
-            &__username {
+            &__username--dark {
                 color: $color-text-dark-1;
             }
         }
 
         & .followers-count {
 
-            &__counter {
+            &__counter--dark {
                 color: $color-text-dark-1;
 
-                & span {
+                & .span--dark {
                     color: $color-text-dark-2;
                 }
             }
@@ -66,16 +69,8 @@ body {
     }
 }
 
-.button {
-    background: linear-gradient(60deg, $color-toggle-dark);
-
-    &-indicator {
-        background-color: $color-background-dark-2;
-    }
-}
-
 .rate {
-    &--normal {
+    &--normal--dark {
         @extend .rate;
         @extend .followers-indicator__counter;
         color: $color-text-dark-2;
@@ -84,16 +79,16 @@ body {
 
 .overview {
 
-    &-heading {
+    &-heading--dark {
         color: $color-text-dark-2;
     }
 
-    &-card {
+    &-card--dark {
         background-color: $color-background-dark-3;
 
-        &__element {
+        & .overview-card__element {
 
-            & .title {
+            & .title--dark {
                 color: $color-text-dark-1;
             }
 
@@ -101,7 +96,7 @@ body {
 
             }
 
-            & .amount {
+            & .amount--dark {
                 color: $color-text-dark-2;
             }
         }

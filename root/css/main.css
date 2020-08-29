@@ -18,7 +18,7 @@ body {
   padding: 0 6.7%;
 }
 
-.rate, .rate--good, .rate--bad, .rate--normal {
+.rate, .rate--good, .rate--bad, .rate--normal--dark {
   margin-left: .5rem;
 }
 
@@ -66,7 +66,7 @@ body {
   text-transform: none;
 }
 
-.followers-card .followers-indicator__counter, .followers-card .rate--good, .followers-card .rate--bad, .followers-card .rate--normal {
+.followers-card .followers-indicator__counter, .followers-card .rate--good, .followers-card .rate--bad, .followers-card .rate--normal--dark {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: capitalize;
@@ -81,7 +81,7 @@ body {
   font-size: 3.2rem;
 }
 
-.rate, .rate--good, .rate--bad, .rate--normal {
+.rate, .rate--good, .rate--bad, .rate--normal--dark {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: capitalize;
@@ -310,75 +310,74 @@ body {
           align-items: center;
 }
 
-body {
+.body--dark {
   background-color: #1e202a;
 }
 
-.header {
+.header--dark {
   background-color: #1f212e;
 }
 
-.header::after {
-  background-color: inherit;
-}
-
-.header-heading__title {
+.header--dark .header-heading__title--dark {
   color: white;
 }
 
-.header-heading__followers-number {
+.header--dark .header-heading__followers-number--dark {
   color: #8b97c6;
 }
 
-.header-heading::after {
-  background-color: #8b97c6;
+.header--dark .header-heading::after {
   border-bottom: 0.1rem solid #8b97c6;
 }
 
-.header .mode__title {
+.header--dark .mode__title--dark {
   color: #8b97c6;
 }
 
-.followers-card {
-  background-color: #252a41;
-}
-
-.followers-card .social-media__username {
-  color: #8b97c6;
-}
-
-.followers-card .followers-count__counter {
-  color: #8b97c6;
-}
-
-.followers-card .followers-count__counter span {
-  color: white;
-}
-
-.button {
+.header--dark .mode__button--dark {
   background: linear-gradient(60deg, #378fe6, #3eda82);
 }
 
-.button-indicator {
+.header--dark .mode__button--dark .mode__button-indicator--dark {
   background-color: #1f212e;
 }
 
-.rate--normal {
-  color: white;
+.header--dark::after {
+  background-color: inherit;
 }
 
-.overview-heading {
-  color: white;
-}
-
-.overview-card {
+.followers-card--dark {
   background-color: #252a41;
 }
 
-.overview-card__element .title {
+.followers-card--dark .social-media__username--dark {
   color: #8b97c6;
 }
 
-.overview-card__element .amount {
+.followers-card--dark .followers-count__counter--dark {
+  color: #8b97c6;
+}
+
+.followers-card--dark .followers-count__counter--dark .span--dark {
+  color: white;
+}
+
+.rate--normal--dark {
+  color: white;
+}
+
+.overview-heading--dark {
+  color: white;
+}
+
+.overview-card--dark {
+  background-color: #252a41;
+}
+
+.overview-card--dark .overview-card__element .title--dark {
+  color: #8b97c6;
+}
+
+.overview-card--dark .overview-card__element .amount--dark {
   color: white;
 }
