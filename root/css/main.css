@@ -18,7 +18,7 @@ body {
   padding: 0 6.7%;
 }
 
-.rate, .rate--good, .rate--bad, .rate--normal--dark {
+.rate, .rate--good, .rate--bad, .rate--normal.dark, .rate--normal.light {
   margin-left: .5rem;
 }
 
@@ -66,7 +66,7 @@ body {
   text-transform: none;
 }
 
-.followers-card .followers-indicator__counter, .followers-card .rate--good, .followers-card .rate--bad, .followers-card .rate--normal--dark {
+.followers-card .followers-indicator__counter, .followers-card .rate--good, .followers-card .rate--bad, .followers-card .rate--normal.dark, .followers-card .rate--normal.light {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: capitalize;
@@ -81,7 +81,7 @@ body {
   font-size: 3.2rem;
 }
 
-.rate, .rate--good, .rate--bad, .rate--normal--dark {
+.rate, .rate--good, .rate--bad, .rate--normal.dark, .rate--normal.light {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: capitalize;
@@ -152,6 +152,10 @@ body {
   position: relative;
 }
 
+.followers-card:nth-child(3) > .social-media > .social-media__username {
+  margin-left: .6rem;
+}
+
 .followers-card:nth-child(3)::after {
   background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
   background: linear-gradient(to right, #fdc468, #df4996);
@@ -178,7 +182,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 9rem;
+  min-width: 9rem;
 }
 
 .followers-card .followers-count__counter span {
@@ -239,7 +243,6 @@ body {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: .1;
   position: absolute;
   width: 100%;
 }
@@ -270,6 +273,8 @@ body {
 }
 
 .overview-heading {
+  -ms-grid-column-align: left;
+      justify-self: left;
   min-width: 18.3rem;
 }
 
@@ -310,74 +315,148 @@ body {
           align-items: center;
 }
 
-.body--dark {
+.body.dark {
   background-color: #1e202a;
 }
 
-.header--dark {
+.header.dark {
   background-color: #1f212e;
 }
 
-.header--dark .header-heading__title--dark {
+.header.dark .header-heading__title.dark {
   color: white;
 }
 
-.header--dark .header-heading__followers-number--dark {
+.header.dark .header-heading__followers-number.dark {
   color: #8b97c6;
 }
 
-.header--dark .header-heading::after {
+.header.dark .header-heading::after {
   border-bottom: 0.1rem solid #8b97c6;
+  opacity: .1;
 }
 
-.header--dark .mode__title--dark {
+.header.dark .mode__title.dark {
   color: #8b97c6;
 }
 
-.header--dark .mode__button--dark {
+.header.dark .mode__button.dark {
   background: linear-gradient(60deg, #378fe6, #3eda82);
 }
 
-.header--dark .mode__button--dark .mode__button-indicator--dark {
+.header.dark .mode__button.dark .mode__button-indicator.dark {
   background-color: #1f212e;
 }
 
-.header--dark::after {
+.header.dark::after {
   background-color: inherit;
 }
 
-.followers-card--dark {
+.followers-card.dark {
   background-color: #252a41;
 }
 
-.followers-card--dark .social-media__username--dark {
+.followers-card.dark .social-media__username.dark {
   color: #8b97c6;
 }
 
-.followers-card--dark .followers-count__counter--dark {
+.followers-card.dark .followers-count__counter.dark {
   color: #8b97c6;
 }
 
-.followers-card--dark .followers-count__counter--dark .span--dark {
+.followers-card.dark .followers-count__counter.dark > span.dark {
   color: white;
 }
 
-.rate--normal--dark {
+.rate--normal.dark {
   color: white;
 }
 
-.overview-heading--dark {
+.overview-heading.dark {
   color: white;
 }
 
-.overview-card--dark {
+.overview-card.dark {
   background-color: #252a41;
 }
 
-.overview-card--dark .overview-card__element .title--dark {
+.overview-card.dark .overview-card__element .title.dark {
   color: #8b97c6;
 }
 
-.overview-card--dark .overview-card__element .amount--dark {
+.overview-card.dark .overview-card__element .amount.dark {
   color: white;
+}
+
+.body.light {
+  background-color: white;
+}
+
+.header.light {
+  background-color: white;
+}
+
+.header.light .header-heading__title.light {
+  color: #1e202a;
+}
+
+.header.light .header-heading__followers-number.light {
+  color: #63687e;
+}
+
+.header.light .header-heading::after {
+  border-bottom: 0.1rem solid #1e202a;
+  opacity: .8;
+}
+
+.header.light .mode__title.light {
+  color: #63687e;
+}
+
+.header.light .mode__button.light {
+  background: #aeb3cb;
+}
+
+.header.light .mode__button.light .mode__button-indicator.light {
+  background-color: #f5f7ff;
+}
+
+.header.light::after {
+  background-color: inherit;
+}
+
+.followers-card.light {
+  background-color: #f0f2fa;
+}
+
+.followers-card.light .social-media__username.light {
+  color: #63687e;
+}
+
+.followers-card.light .followers-count__counter.light {
+  color: #1e202a;
+}
+
+.followers-card.light .followers-count__counter.light > span.light {
+  color: #1e202a;
+}
+
+.rate--normal.light {
+  color: #1db489;
+}
+
+.overview-heading.light {
+  color: #63687e;
+}
+
+.overview-card.light {
+  background-color: #f0f2fa;
+}
+
+.overview-card.light .overview-card__element .title.light {
+  color: #63687e;
+}
+
+.overview-card.light .overview-card__element .amount.light {
+  color: #1e202a;
 }
