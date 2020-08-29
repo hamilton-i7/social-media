@@ -31,6 +31,12 @@ function toggleTheme() {
             activeToggle(el);
         });
     });
+
+    if (mode.innerText.includes("Dark")) {
+        mode.innerText = "light mode";
+    } else if (mode.innerText.includes("Light")) {
+        mode.innerText = "dark mode";
+    }
 }
 
 function activeToggle(el) {
