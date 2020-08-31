@@ -90,6 +90,7 @@ body {
 .button {
   border: none;
   border-radius: 5rem;
+  cursor: pointer;
   height: 2.4rem;
   outline: none;
   position: relative;
@@ -105,6 +106,52 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 1.8rem;
+}
+
+.slide-right {
+  -webkit-animation: slide-right .3s ease-in forwards;
+          animation: slide-right .3s ease-in forwards;
+}
+
+.slide-left {
+  -webkit-animation: slide-left .3s ease-in forwards;
+          animation: slide-left .3s ease-in forwards;
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    left: 8%;
+  }
+  to {
+    left: 54%;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    left: 8%;
+  }
+  to {
+    left: 54%;
+  }
+}
+
+@-webkit-keyframes slide-left {
+  from {
+    left: 54%;
+  }
+  to {
+    left: 8%;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: 54%;
+  }
+  to {
+    left: 8%;
+  }
 }
 
 .followers {

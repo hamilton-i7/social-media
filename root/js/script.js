@@ -34,8 +34,12 @@ function toggleTheme() {
 
     if (mode.innerText.includes("Dark")) {
         mode.innerText = "light mode";
+        buttonIndicator.classList.add("slide-right");
+        buttonIndicator.classList.remove("slide-left");
     } else if (mode.innerText.includes("Light")) {
         mode.innerText = "dark mode";
+        buttonIndicator.classList.add("slide-left");
+        buttonIndicator.classList.remove("slide-right");
     }
 }
 
