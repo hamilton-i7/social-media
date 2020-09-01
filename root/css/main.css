@@ -9,13 +9,22 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 327px) {
+  html {
+    font-size: 60%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .container {
-  padding: 0 6.7%;
+  margin: 0 auto;
+  max-width: 33rem;
+  min-width: 17.5rem;
+  width: 80%;
 }
 
 .rate, .rate--good, .rate--bad, .rate--normal.dark, .rate--normal.light {
@@ -43,8 +52,26 @@ body {
   font-size: 2.4rem;
 }
 
+@media only screen and (max-width: 353px) {
+  .heading-primary, .heading-secondary {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 282px) {
+  .heading-primary, .heading-secondary {
+    font-size: 1.8rem;
+  }
+}
+
 .heading-tertiary {
   font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 353px) {
+  .heading-tertiary {
+    font-size: 1.2rem;
+  }
 }
 
 .followers-card .social-media__username {
@@ -109,13 +136,13 @@ body {
 }
 
 .slide-right {
-  -webkit-animation: slide-right .3s ease-in forwards;
-          animation: slide-right .3s ease-in forwards;
+  -webkit-animation: slide-right .25s ease-in forwards;
+          animation: slide-right .25s ease-in forwards;
 }
 
 .slide-left {
-  -webkit-animation: slide-left .3s ease-in forwards;
-          animation: slide-left .3s ease-in forwards;
+  -webkit-animation: slide-left .25s ease-in forwards;
+          animation: slide-left .25s ease-in forwards;
 }
 
 @-webkit-keyframes slide-right {
@@ -259,23 +286,6 @@ body {
   position: relative;
 }
 
-.header::after {
-  border-radius: 2.5rem;
-  bottom: -25%;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-
-.header-heading, .header .mode {
-  max-width: 33rem;
-  min-width: 16rem;
-  width: 100%;
-}
-
 .header-heading {
   padding-bottom: 2.2rem;
   padding-top: 3.6rem;
@@ -308,6 +318,17 @@ body {
   padding-top: 1.6rem;
 }
 
+.header::after {
+  border-radius: 2.5rem;
+  bottom: -25%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
 .overview {
   display: -ms-grid;
   display: grid;
@@ -332,8 +353,6 @@ body {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   height: 12.5rem;
-  max-width: 33rem;
-  min-width: 17.5rem;
   padding: 6% 8%;
   width: 100%;
 }
