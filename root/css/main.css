@@ -27,6 +27,12 @@ body {
   width: 80%;
 }
 
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 48rem;
+  }
+}
+
 .rate, .rate--good, .rate--bad, .rate--normal.dark, .rate--normal.light {
   margin-left: .5rem;
 }
@@ -74,11 +80,22 @@ body {
   }
 }
 
+.followers-card {
+  font-size: 2.4rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .followers-card {
+    font-size: 1.8rem;
+  }
+}
+
 .followers-card .social-media__username {
-  font-size: 1.2rem;
+  font-size: .5em;
 }
 
 .followers-card .followers-count__counter {
+  font-size: .5em;
   font-weight: 400;
   letter-spacing: .5rem;
   text-align: center;
@@ -86,7 +103,7 @@ body {
 }
 
 .followers-card .followers-count__counter span {
-  font-size: 5.6rem;
+  font-size: 4.7em;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 1.2;
@@ -94,22 +111,32 @@ body {
 }
 
 .followers-card .followers-indicator__counter, .followers-card .rate--good, .followers-card .rate--bad, .followers-card .rate--normal.dark, .followers-card .rate--normal.light {
-  font-size: 1.2rem;
+  font-size: .5em;
   font-weight: 400;
   text-transform: capitalize;
 }
 
+.overview-card {
+  font-size: 2.4rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card {
+    font-size: 1.8rem;
+  }
+}
+
 .overview-card__element .title {
-  font-size: 1.4rem;
+  font-size: .6em;
   text-transform: capitalize;
 }
 
 .overview-card__element .amount {
-  font-size: 3.2rem;
+  font-size: 1.35em;
 }
 
 .rate, .rate--good, .rate--bad, .rate--normal.dark, .rate--normal.light {
-  font-size: 1.2rem;
+  font-size: .5em;
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -188,6 +215,14 @@ body {
       grid-template-columns: 1fr;
   justify-items: center;
   row-gap: 2.4rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .followers {
+    gap: 3rem;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .followers-card {
@@ -340,10 +375,25 @@ body {
   row-gap: 1.6rem;
 }
 
+@media only screen and (min-width: 600px) {
+  .overview {
+    gap: 3rem;
+        grid-template-areas: "heading heading" "first second" "third fourth" "fifth sixth" "seventh eighth";
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .overview-heading {
   -ms-grid-column-align: left;
       justify-self: left;
   min-width: 18.3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-heading {
+    grid-area: heading;
+  }
 }
 
 .overview-card {
@@ -355,6 +405,60 @@ body {
   height: 12.5rem;
   padding: 6% 8%;
   width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card {
+    padding: 12%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(2) {
+    grid-area: first;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(3) {
+    grid-area: second;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(4) {
+    grid-area: third;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(5) {
+    grid-area: fourth;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(6) {
+    grid-area: fifth;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(7) {
+    grid-area: sixth;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(8) {
+    grid-area: seventh;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .overview-card:nth-child(9) {
+    grid-area: eighth;
+  }
 }
 
 .overview-card__element:nth-child(even) {
@@ -379,6 +483,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.overview-card__element .icon {
+  width: .84em;
 }
 
 .body.dark {

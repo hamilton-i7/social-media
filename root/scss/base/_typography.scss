@@ -31,24 +31,30 @@ body {
 .followers {
 
     &-card {
+        font-size: 2.4rem;
+
+        @media only screen and (min-width: 600px) {
+            font-size: 1.8rem;
+        }
 
         & .social-media {
 
             &__username {
-                font-size: 1.2rem;
+                font-size: .5em;
             }
         }
 
         & .followers-count {
 
             &__counter {
+                font-size: .5em;
                 font-weight: 400;
                 letter-spacing: .5rem;
                 text-align: center;
                 text-transform: uppercase;
 
                 & span {
-                    font-size: 5.6rem;
+                    font-size: 4.7em;
                     font-weight: 700;
                     letter-spacing: normal;
                     line-height: 1.2;
@@ -60,7 +66,7 @@ body {
         & .followers-indicator {
             
             &__counter {
-                font-size: 1.2rem;
+                font-size: .5em;
                 font-weight: 400;
                 text-transform: capitalize;
             }
@@ -75,20 +81,21 @@ body {
     }
 
     &-card {
+        font-size: 2.4rem;
+
+        @media only screen and (min-width: 600px) {
+            font-size: 1.8rem;
+        }
 
         &__element {
 
             & .title {
-                font-size: 1.4rem;
+                font-size: .6em;
                 text-transform: capitalize;
             }
 
-            & .icon {
-
-            }
-
             & .amount {
-                font-size: 3.2rem;
+                font-size: 1.35em;
             }
         }
     }
@@ -96,7 +103,7 @@ body {
 
 
 .rate {
-    font-size: 1.2rem;
+    font-size: .5em;
     font-weight: 400;
     text-transform: capitalize;
 }
