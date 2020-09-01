@@ -1,49 +1,42 @@
-const body = document.querySelector(".js--body");
-const mainHeader = document.querySelector(".js--header");
-const mainTitle = document.querySelector(".js--mainTitle");
-const totalFollowers = document.querySelector(".js--totalFollowers");
-const mode = document.querySelector(".js--mode");
-const button = document.querySelector(".js--button");
-const buttonIndicator = document.querySelector(".js--buttonIndicator");
-const followersCards = document.querySelectorAll(".js--followersCard");
-const usernames = document.querySelectorAll(".js--username");
-const followersCounters = document.querySelectorAll(".js--followersCounter");
-const followersSpan = document.querySelectorAll(".js--followersSpan");
-const rate = document.querySelector(".js--rateNormal");
-const overviewHeader = document.querySelector(".js--overviewHeader");
-const overviewCards = document.querySelectorAll(".js--overviewCard");
-const overviewCardTitles = document.querySelectorAll(".js--overviewCardTitle");
-const overviewCardAmounts = document.querySelectorAll(".js--overviewCardAmount");
+const UIController = {
+    DOMstrings: {
+        themes: ["*.dark", "*.light"],
+        button: ".js--button",
+        buttonIndicator: ".js--buttonIndicator",
+        mode: ".js--mode",
+        body: ".js--body"
+    },
+    toggleTheme: function() {
+        const body = document.querySelector(UIController.DOMstrings.body);
+        let elements;
 
-const singleElements = [body, mainHeader, mainTitle, totalFollowers, mode, button, buttonIndicator, rate, overviewHeader];
-const repeatedElements = [followersCards, usernames, followersCounters, followersSpan, overviewCards, overviewCardTitles, overviewCardAmounts];
+        if (body.classList.contains("dark")) {
+            elements = document.querySelectorAll(UIController.DOMstrings.themes[0]);
+        } else if (body.classList.contains("light")) {
+            elements = elements = document.querySelectorAll(UIController.DOMstrings.themes[1]);
+        }
 
-
-button.addEventListener("click", toggleTheme);
-
-function toggleTheme() {
-    singleElements.forEach(function(el) {
-        activeToggle(el);
-    });
-
-    repeatedElements.forEach(function(list) {
-        list.forEach(function(el) {
-            activeToggle(el);
+        elements.forEach(el => {
+            el.classList.toggle("dark");
+            el.classList.toggle("light");
         });
-    });
 
-    if (mode.innerText.includes("Dark")) {
-        mode.innerText = "light mode";
-        buttonIndicator.classList.add("slide-right");
-        buttonIndicator.classList.remove("slide-left");
-    } else if (mode.innerText.includes("Light")) {
-        mode.innerText = "dark mode";
-        buttonIndicator.classList.add("slide-left");
-        buttonIndicator.classList.remove("slide-right");
+        UIController.changeMode();
+    },
+    changeMode: function() {
+        const mode = document.querySelector(UIController.DOMstrings.mode);
+        const buttonIndicator = document.querySelector(UIController.DOMstrings.buttonIndicator);
+
+        if (mode.innerText.includes("Dark")) {
+            mode.innerText = "light mode";
+            buttonIndicator.classList.add("slide-right");
+            buttonIndicator.classList.remove("slide-left");
+        } else if (mode.innerText.includes("Light")) {
+            mode.innerText = "dark mode";
+            buttonIndicator.classList.add("slide-left");
+            buttonIndicator.classList.remove("slide-right");
+        }
     }
 }
 
-function activeToggle(el) {
-    el.classList.toggle("dark");
-    el.classList.toggle("light");
-}
+document.querySelector(".js--button").addEventListener("click", UIController.toggleTheme);
