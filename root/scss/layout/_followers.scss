@@ -8,10 +8,15 @@
         gap: 3rem;
         grid-template-columns: repeat(2, 1fr);
     }
+    @media only screen and (min-width: 1000px) {
+        gap: 3rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
 
     &-card {
         align-items: center;
         border-radius: .5rem;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         height: 21.6rem;

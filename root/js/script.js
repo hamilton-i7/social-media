@@ -24,15 +24,13 @@ const UIController = {
         UIController.changeMode();
     },
     changeMode: function() {
-        const mode = document.querySelector(UIController.DOMstrings.mode);
+        const button = document.querySelector(UIController.DOMstrings.button);
         const buttonIndicator = document.querySelector(UIController.DOMstrings.buttonIndicator);
 
-        if (mode.innerText.includes("Dark")) {
-            mode.innerText = "light mode";
+        if (button.classList.contains("light")) {
             buttonIndicator.classList.add("slide-right");
             buttonIndicator.classList.remove("slide-left");
-        } else if (mode.innerText.includes("Light")) {
-            mode.innerText = "dark mode";
+        } else if (button.classList.contains("dark")) {
             buttonIndicator.classList.add("slide-left");
             buttonIndicator.classList.remove("slide-right");
         }

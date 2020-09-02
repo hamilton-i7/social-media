@@ -16,6 +16,14 @@
         "seventh eighth";
         grid-template-columns: repeat(2, 1fr);
     }
+    @media only screen and (min-width: 1000px) {
+        gap: 3rem;
+        grid-template-areas: 
+        "heading heading heading heading"
+        "first second third fourth"
+        "fifth sixth seventh eighth";
+        grid-template-columns: repeat(4, 1fr);
+    }
 
     &-heading {
         justify-self: left;
@@ -28,6 +36,7 @@
 
     &-card {
         border-radius: .5rem;
+        cursor: pointer;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         height: 12.5rem;
@@ -36,6 +45,9 @@
 
         @media only screen and (min-width: 600px) {
             padding: 12%;
+        }
+        @media only screen and (min-width: 1400px) {
+            padding: 8%;
         }
 
         &:nth-child(2) {

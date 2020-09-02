@@ -27,6 +27,11 @@
 
         &__button.light {
             background: $color-toggle-light;
+            transition: background ease-in;
+            
+            &:hover {
+                background: linear-gradient(60deg, $color-toggle-dark);
+            }
 
             .mode__button-indicator.light {
                 background-color: $color-background-light-2;
@@ -42,6 +47,14 @@
 .followers {
     &-card.light {
         background-color: $color-background-light-3;
+        transition: background-color .2s ease-in;
+
+        &:hover {
+            @media (pointer: fine) {
+                background-color: $color-background-light-3-hover;
+            }
+        }
+
 
         & .social-media {
             
@@ -86,6 +99,13 @@
 
     &-card.light {
         background-color: $color-background-light-3;
+        transition: background-color .2s ease-in;
+
+        &:hover {
+            @media (pointer: fine) {
+                background-color: $color-background-light-3-hover;
+            }
+        }
 
         & .overview-card__element {
 

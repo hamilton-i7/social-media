@@ -33,6 +33,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 120rem;
+  }
+}
+
 .rate, .rate--good, .rate--bad, .rate--normal.dark, .rate--normal.light {
   margin-left: .5rem;
 }
@@ -90,6 +96,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .followers-card {
+    font-size: 2.4rem;
+  }
+}
+
 .followers-card .social-media__username {
   font-size: .5em;
 }
@@ -126,6 +138,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .overview-card {
+    font-size: 2.4rem;
+  }
+}
+
 .overview-card__element .title {
   font-size: .6em;
   text-transform: capitalize;
@@ -144,11 +162,16 @@ body {
 .button {
   border: none;
   border-radius: 5rem;
-  cursor: pointer;
   height: 2.4rem;
   outline: none;
   position: relative;
   width: 4.8rem;
+}
+
+@media (pointer: fine) {
+  .button {
+    cursor: pointer;
+  }
 }
 
 .button-indicator {
@@ -225,11 +248,20 @@ body {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .followers {
+    gap: 3rem;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .followers-card {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: .5rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,10 +353,34 @@ body {
   position: relative;
 }
 
+@media only screen and (min-width: 1000px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 10%;
+  }
+}
+
 .header-heading {
   padding-bottom: 2.2rem;
   padding-top: 3.6rem;
   position: relative;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header-heading {
+    margin: unset;
+    max-width: unset;
+    min-width: unset;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .header-heading__title {
@@ -339,6 +395,12 @@ body {
   width: 100%;
 }
 
+@media only screen and (min-width: 1000px) {
+  .header-heading::after {
+    display: none;
+  }
+}
+
 .header .mode {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -346,11 +408,32 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 2rem;
   padding-top: 1.6rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header .mode {
+    margin: unset;
+    max-width: unset;
+    min-width: unset;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header .mode__title {
+    margin-right: 1rem;
+  }
 }
 
 .header::after {
@@ -362,6 +445,13 @@ body {
   position: absolute;
   width: 100%;
   z-index: -1;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header::after {
+    bottom: -105%;
+    height: 300%;
+  }
 }
 
 .overview {
@@ -384,6 +474,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .overview {
+    gap: 3rem;
+        grid-template-areas: "heading heading heading heading" "first second third fourth" "fifth sixth seventh eighth";
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .overview-heading {
   -ms-grid-column-align: left;
       justify-self: left;
@@ -398,6 +497,7 @@ body {
 
 .overview-card {
   border-radius: .5rem;
+  cursor: pointer;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -410,6 +510,12 @@ body {
 @media only screen and (min-width: 600px) {
   .overview-card {
     padding: 12%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .overview-card {
+    padding: 8%;
   }
 }
 
@@ -512,6 +618,12 @@ body {
 
 .header.dark .mode__title.dark {
   color: #8b97c6;
+  -webkit-transition: color .2s ease-in;
+  transition: color .2s ease-in;
+}
+
+.header.dark .mode__title.dark:hover {
+  color: white;
 }
 
 .header.dark .mode__button.dark {
@@ -522,12 +634,24 @@ body {
   background-color: #1f212e;
 }
 
+.header.dark .mode__button.dark:hover + .mode__title.dark {
+  color: white;
+}
+
 .header.dark::after {
   background-color: inherit;
 }
 
 .followers-card.dark {
   background-color: #252a41;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+@media (pointer: fine) {
+  .followers-card.dark:hover {
+    background-color: #313857;
+  }
 }
 
 .followers-card.dark .social-media__username.dark {
@@ -552,6 +676,14 @@ body {
 
 .overview-card.dark {
   background-color: #252a41;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+@media (pointer: fine) {
+  .overview-card.dark:hover {
+    background-color: #313857;
+  }
 }
 
 .overview-card.dark .overview-card__element .title.dark {
@@ -589,6 +721,12 @@ body {
 
 .header.light .mode__button.light {
   background: #aeb3cb;
+  -webkit-transition: background ease-in;
+  transition: background ease-in;
+}
+
+.header.light .mode__button.light:hover {
+  background: linear-gradient(60deg, #378fe6, #3eda82);
 }
 
 .header.light .mode__button.light .mode__button-indicator.light {
@@ -601,6 +739,14 @@ body {
 
 .followers-card.light {
   background-color: #f0f2fa;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+@media (pointer: fine) {
+  .followers-card.light:hover {
+    background-color: #e3e7f6;
+  }
 }
 
 .followers-card.light .social-media__username.light {
@@ -625,6 +771,14 @@ body {
 
 .overview-card.light {
   background-color: #f0f2fa;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+@media (pointer: fine) {
+  .overview-card.light:hover {
+    background-color: #e3e7f6;
+  }
 }
 
 .overview-card.light .overview-card__element .title.light {

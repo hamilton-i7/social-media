@@ -21,8 +21,14 @@
     }
 
     & .mode {
+
         &__title.dark {
             color: $color-text-dark-1;
+            transition: color .2s ease-in;
+
+            &:hover {
+                color: $color-text-dark-2;
+            }
         }
 
         &__button.dark {
@@ -30,6 +36,10 @@
 
             .mode__button-indicator.dark {
                 background-color: $color-background-dark-2;
+            }
+
+            &:hover + .mode__title.dark {
+                color: $color-text-dark-2;
             }
         }
     }
@@ -42,6 +52,14 @@
 .followers {
     &-card.dark {
         background-color: $color-background-dark-3;
+        transition: background-color .2s ease-in;
+
+        &:hover {
+            @media (pointer: fine) {
+                background-color: $color-background-dark-3-hover;
+            }
+        }
+
 
         & .social-media {
             
@@ -86,6 +104,13 @@
 
     &-card.dark {
         background-color: $color-background-dark-3;
+        transition: background-color .2s ease-in;
+
+        &:hover {
+            @media (pointer: fine) {
+                background-color: $color-background-dark-3-hover;
+            }
+        }
 
         & .overview-card__element {
 
