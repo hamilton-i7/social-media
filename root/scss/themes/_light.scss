@@ -27,10 +27,12 @@
 
         &__button.light {
             background: $color-toggle-light;
-            transition: background ease-in;
+            // transition: background ease-in;
             
             &:hover {
-                background: linear-gradient(60deg, $color-toggle-dark);
+                @media (pointer: fine) {
+                    background: linear-gradient(60deg, $color-toggle-dark);
+                }
             }
 
             .mode__button-indicator.light {
@@ -47,7 +49,7 @@
 .followers {
     &-card.light {
         background-color: $color-background-light-3;
-        transition: background-color .2s ease-in;
+        // transition: background-color .2s ease-in;
 
         &:hover {
             @media (pointer: fine) {
@@ -73,13 +75,6 @@
                 }
             }
         }
-
-        & .followers-indicator {
-
-            &__counter {
-                
-            }
-        }
     }
 }
 
@@ -99,7 +94,7 @@
 
     &-card.light {
         background-color: $color-background-light-3;
-        transition: background-color .2s ease-in;
+        // transition: background-color .2s ease-in;
 
         &:hover {
             @media (pointer: fine) {
@@ -111,10 +106,6 @@
 
             & .title.light {
                 color: $color-text-light-1;
-            }
-
-            & .icon {
-
             }
 
             & .amount.light {

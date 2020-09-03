@@ -24,7 +24,7 @@
 
         &__title.dark {
             color: $color-text-dark-1;
-            transition: color .2s ease-in;
+            // transition: color .2s ease-in;
 
             &:hover {
                 color: $color-text-dark-2;
@@ -39,10 +39,13 @@
             }
 
             &:hover + .mode__title.dark {
-                color: $color-text-dark-2;
+                @media (pointer: fine) {
+                    color: $color-text-dark-2;
+                }
             }
         }
     }
+
 
     &::after {
         background-color: inherit;
@@ -52,7 +55,7 @@
 .followers {
     &-card.dark {
         background-color: $color-background-dark-3;
-        transition: background-color .2s ease-in;
+        // transition: background-color .2s ease-in;
 
         &:hover {
             @media (pointer: fine) {
@@ -78,13 +81,6 @@
                 }
             }
         }
-
-        & .followers-indicator {
-
-            &__counter {
-                
-            }
-        }
     }
 }
 
@@ -104,7 +100,7 @@
 
     &-card.dark {
         background-color: $color-background-dark-3;
-        transition: background-color .2s ease-in;
+        // transition: background-color .2s ease-in;
 
         &:hover {
             @media (pointer: fine) {
@@ -116,10 +112,6 @@
 
             & .title.dark {
                 color: $color-text-dark-1;
-            }
-
-            & .icon {
-
             }
 
             & .amount.dark {

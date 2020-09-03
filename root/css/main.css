@@ -15,6 +15,18 @@ html {
   }
 }
 
+@media only screen and (min-width: 1900px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  html {
+    font-size: 130%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -162,16 +174,11 @@ body {
 .button {
   border: none;
   border-radius: 5rem;
+  cursor: pointer;
   height: 2.4rem;
   outline: none;
   position: relative;
   width: 4.8rem;
-}
-
-@media (pointer: fine) {
-  .button {
-    cursor: pointer;
-  }
 }
 
 .button-indicator {
@@ -340,6 +347,10 @@ body {
 }
 
 .header {
+  position: relative;
+}
+
+.header-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -350,11 +361,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
 }
 
 @media only screen and (min-width: 1000px) {
-  .header {
+  .header-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -362,18 +372,17 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 10%;
   }
 }
 
-.header-heading {
+.header-content .header-heading {
   padding-bottom: 2.2rem;
   padding-top: 3.6rem;
   position: relative;
 }
 
 @media only screen and (min-width: 1000px) {
-  .header-heading {
+  .header-content .header-heading {
     margin: unset;
     max-width: unset;
     min-width: unset;
@@ -383,11 +392,11 @@ body {
   }
 }
 
-.header-heading__title {
+.header-content .header-heading__title {
   margin-bottom: .1rem;
 }
 
-.header-heading::after {
+.header-content .header-heading::after {
   bottom: 0;
   content: "";
   left: 0;
@@ -396,12 +405,12 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-  .header-heading::after {
+  .header-content .header-heading::after {
     display: none;
   }
 }
 
-.header .mode {
+.header-content .mode {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -420,7 +429,7 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-  .header .mode {
+  .header-content .mode {
     margin: unset;
     max-width: unset;
     min-width: unset;
@@ -431,7 +440,7 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-  .header .mode__title {
+  .header-content .mode__title {
     margin-right: 1rem;
   }
 }
@@ -618,8 +627,6 @@ body {
 
 .header.dark .mode__title.dark {
   color: #8b97c6;
-  -webkit-transition: color .2s ease-in;
-  transition: color .2s ease-in;
 }
 
 .header.dark .mode__title.dark:hover {
@@ -634,8 +641,10 @@ body {
   background-color: #1f212e;
 }
 
-.header.dark .mode__button.dark:hover + .mode__title.dark {
-  color: white;
+@media (pointer: fine) {
+  .header.dark .mode__button.dark:hover + .mode__title.dark {
+    color: white;
+  }
 }
 
 .header.dark::after {
@@ -644,8 +653,6 @@ body {
 
 .followers-card.dark {
   background-color: #252a41;
-  -webkit-transition: background-color .2s ease-in;
-  transition: background-color .2s ease-in;
 }
 
 @media (pointer: fine) {
@@ -676,8 +683,6 @@ body {
 
 .overview-card.dark {
   background-color: #252a41;
-  -webkit-transition: background-color .2s ease-in;
-  transition: background-color .2s ease-in;
 }
 
 @media (pointer: fine) {
@@ -721,12 +726,12 @@ body {
 
 .header.light .mode__button.light {
   background: #aeb3cb;
-  -webkit-transition: background ease-in;
-  transition: background ease-in;
 }
 
-.header.light .mode__button.light:hover {
-  background: linear-gradient(60deg, #378fe6, #3eda82);
+@media (pointer: fine) {
+  .header.light .mode__button.light:hover {
+    background: linear-gradient(60deg, #378fe6, #3eda82);
+  }
 }
 
 .header.light .mode__button.light .mode__button-indicator.light {
@@ -739,8 +744,6 @@ body {
 
 .followers-card.light {
   background-color: #f0f2fa;
-  -webkit-transition: background-color .2s ease-in;
-  transition: background-color .2s ease-in;
 }
 
 @media (pointer: fine) {
@@ -771,8 +774,6 @@ body {
 
 .overview-card.light {
   background-color: #f0f2fa;
-  -webkit-transition: background-color .2s ease-in;
-  transition: background-color .2s ease-in;
 }
 
 @media (pointer: fine) {
